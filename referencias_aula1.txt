@@ -1,0 +1,18 @@
+Python: 
+    - https://www.python.org/
+    - Itens: 1, 8, 11, 13, 14.
+
+Git:
+    - https://git-scm.com/
+    - Itens: 1, 2, 4, 13, 14.
+
+Visual Studio Code:
+    - https://code.visualstudio.com/
+    - Itens: 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14.
+
+SQLite Browser:
+    - https://sqlitebrowser.org/
+- Itens: 8, 11, 13, 14.
+
+Relação:
+    - Todas as paginas acima são feitas pelo formato mais comum da web, sendo este utilizador das ferramentas HTML CSS e JavaScript. 
