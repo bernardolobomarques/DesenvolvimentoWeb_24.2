@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <main>
+        <h1 id="h1">Esse é o h1</h1>
+        <h2>Esse é o h2</h2>
+        <h3>Esse é o h3</h3>
+        <h4>Esse é o h4</h4>
+        <h5>Esse é o h5</h5>
+        <h6>Esse é o h6</h6>
+        <hr>
+        <p>Esse é o meu primeiro paragrafo da pagina</p>
+        <div>
+            <p>E esse é um paragrafo dentro de uma div, <span class="texto-modificado">e essa parte do texto está dentro de uma span</span></p>
+        </div>
+        <div>
+            <ul>
+                <li><del>Esse é o primeiro item da minha lista nao ordenada</del></li>
+                <li><strong>Esse é o segundo item da minha lista nao ordenada</strong></li>
+                <li><span>Esse é o terceiro item da minha lista nao ordenada</strong></li>
+            </ul>
+            <ol>
+                <li><em>Esse é o primeiro item da minha lista  ordenada</em></li>
+                <li><ins>Esse é o segundo item da minha lista ordenada</ins></li>
+                <li>Esse é o terceiro item da minha lista  ordenada</li>
+            </ol>
+            <menu>
+                <li>Esse é o primeiro link do menu</li>
+                <li>Esse é o segundo link do menu</li>
+                <li>Esse é o terceiro link do menu</li>
+            </menu>
+            <hr>
+        </div>
+        <div class="images">
+            <figure>
+                <img src="images/cropped-Logo_mangeli.png">
+                <figcaption>Logo site prof mangeli</figcaption>
+            </figure>
+            <video src="images/WhatsApp Video 2024-09-06 at 16.02.27.mp4" controls></video>
+            <video src="images/doguinho.mp4" controls></video>
+            <audio src="images/Benson Boone - Beautiful Things (Official Music Video).mp3" controls></audio>
+            <audio src="images/light-my-fire.mp3" controls></audio>
+            <hr>
+        </div>
+        <div>
+            <form id="form1" method="get">
+                <label><input type="radio" id="input-radio-um-form-get" name="radio" checked/> Esse é o primeiro radio</label>
+                <label><input type="radio" name="radio" id="input-radio-dois-form-get" /> Esse é o segundo radio</label>
+                <!-- coloquei o name para nao poder selecionar os dois ao mesmo tempo, se nao valeria mais usar uma checkbox -->
+                <input placeholder="Esse é um input vazio" name="input-vazio-um" id="input-form-get" required />
+                <label>Comentários: <textarea placeholder="Escreva aqui comentários sobre o site " id="textarea-form-get" name="comentarios"></textarea></label>
+                <label>Qual o seu curso: <select id="select-form-get" name="curso">
+                    <option>Selecione um</option>
+                    <option>Engenharia de Software</option>
+                    <option>Ciência de Dados</option>
+                    <option>Análise e Desenvolvimento de Sistemas</option>
+                </select></label>
+                <button id="submit-form-get" type="submit">Enviar</button>
+            </form>
+            <hr>
+        </div>
+        <div>
+            <form id="form2" method="post">
+                <label><input type="radio" id="input-radio-um-form-post" name="radio" checked/> Esse é o primeiro radio</label>
+                <label><input type="radio" id="input-radio-dois-form-post" name="radio" /> Esse é o segundo radio</label>
+                <!-- coloquei o name para nao poder selecionar os dois ao mesmo tempo, se nao valeria mais usar uma checkbox -->
+                <input placeholder="Esse é um input vazio" id="input-form-post" name="input-vazio-dois" required />
+                <label>Comentários: <textarea placeholder="Escreva aqui comentários sobre o site " id="textarea-form-post" name="comentarios"></textarea></label>
+                <label>Qual o seu curso: <select id="select-form-post" name="curso">
+                    <option>Selecione um</option>
+                    <option>Engenharia de Software</option>
+                    <option>Ciência de Dados</option>
+                    <option>Análise e Desenvolvimento de Sistemas</option>
+                </select></label>
+                <button id="submit-form-get" type="submit">Enviar</button>
+            </form>
+            <hr>
+        </div>
+        <div>
+            <p><a href="#h1">E esse é um texto que leva ao h1</a></p>
+            <p><a target="_blank" href="http://pessoal.mangeli.com.br/">E esse leva para o site do professor</a></p>
+        </div>
+        <div class="um"></div>
+        <div class="dois"></div>
+    </main>
+</body>
+</html>

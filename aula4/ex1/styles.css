@@ -1,0 +1,30 @@
+html {
+    font-family: "Open Sans", "Lato";
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+div.images {
+    background-color: papayawhip;
+}
+
+span.texto-modificado {
+    font-weight: bold;
+    color: red;
+    background-color: lightblue;
+}
+
+div.um {
+    height:100px;
+    width: 70px;
+    background-color: papayawhip;
+    margin-bottom: 15px;
+}
+
+div.dois {
+    height: 20vh;
+    width: 20vw;
+    background-color: papayawhip;
+}
