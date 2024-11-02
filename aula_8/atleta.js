@@ -13,7 +13,7 @@ no time desde x
 detalhes
 */
 
-const params = new URLSearchParams(window.location.search)
+const params = new URLSearchParams(window.location.search);
 
 const id = params.get("id");
 

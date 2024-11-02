@@ -15,7 +15,7 @@ const montaCard = (atleta) => {
     const descricao = document.createElement("p");
     const link = document.createElement("a");
     
-    nome.innerHTML = atleta.nome;
+    nome.innerText = atleta.nome;
     nome.style.fontFamily= 'sains-serif';
     cartao.appendChild(nome);
     
@@ -32,7 +32,7 @@ const montaCard = (atleta) => {
     return cartao;
 }
 
-pega_json(`${url}masculino`).then(
+pega_json(`${url}feminino`).then(
     (r) => {
         r.forEach(
             (ele) => container.appendChild(montaCard(ele))
