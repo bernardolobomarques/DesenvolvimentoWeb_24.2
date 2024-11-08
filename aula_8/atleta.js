@@ -70,7 +70,12 @@ const montaPagina = (dados) => {
     body.appendChild(posicao);
 }
 
-pega_json(`https://botafogo-atletas.mange.li/2024-1/${id}`).then(
-    (r) => montaPagina(r)
-);
+if(sessionStorage.getItem("logado")){
+    pega_json(`https://botafogo-atletas.mange.li/2024-1/${id}`).then(
+        (r) => montaPagina(r)
+    );
+} else {
+    document.body.innerHTML = "<h1>Você precisa estar logado para ter acesso</h1>"
+}
+
 

@@ -71,3 +71,18 @@ pega_json(`${url}feminino`).then(
 // pega_json(`${url}26`).then(
 //     (r) => console.log(r)
 // )
+
+const manipulaBotao = () => {
+    const texto = document.getElementById("senha").value;
+    if (hex_md5(texto) === "5029cc9dd0295ded2f500084635c18c1") {
+        sessionStorage.setItem('logado', true);
+    } else {
+        alert("Senha incorreta");
+    }
+}
+
+document.getElementById("botao").onclick = manipulaBotao;
+
+document.getElementById("logout").onclick = () => {
+    sessionStorage.removeItem('logado');
+}
