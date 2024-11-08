@@ -2,6 +2,29 @@ const url = "https://botafogo-atletas.mange.li/2024-1/"
 
 const container = document.getElementById("container");
 
+const manipulaCLick = (e) => {
+    const id = e.currentTarget.dataset.id;
+
+    const url = `atleta.html?id=${id}`;
+
+    // cookie
+    document.cookie = `id=${id}`;
+    document.cookie = `nJogos=${e.currentTarget.dataset.nJogos}`;
+
+    // Local Storage
+    localStorage.setItem('id', id);
+    localStorage.setItem('dados', JSON.stringify(e.currentTarget.dataset));
+
+    //Session Storage
+    sessionStorage.setItem('id', id);
+    sessionStorage.setItem('dados', JSON.stringify(e.currentTarget.dataset));
+
+    window.location.href = url; 
+
+    console.log(e.currentTarget);
+}
+
+
 const pega_json = async (caminho) => {
     const resposta = await fetch(caminho);
     const dados = await resposta.json();
@@ -13,7 +36,7 @@ const montaCard = (atleta) => {
     const nome = document.createElement("h1");
     const imagem = document.createElement("img");
     const descricao = document.createElement("p");
-    const link = document.createElement("a");
+    // const link = document.createElement("a");
     
     nome.innerText = atleta.nome;
     nome.style.fontFamily= 'sains-serif';
@@ -25,10 +48,15 @@ const montaCard = (atleta) => {
     descricao.innerHTML = atleta.detalhes;
     cartao.appendChild(descricao);
 
-    link.innerText = "Ver Mais";
-    link.href = `atleta.html?id=${atleta.id}`;
-    cartao.appendChild(link)
+    // link.innerText = "Ver Mais";
+    // link.href = `atleta.html?id=${atleta.id}`;
+    // cartao.appendChild(link)
 
+    cartao.dataset.id = atleta.id;
+    cartao.dataset.nJogos = atleta.n_jogos;
+    
+    cartao.onclick = manipulaCLick;
+    
     return cartao;
 }
 

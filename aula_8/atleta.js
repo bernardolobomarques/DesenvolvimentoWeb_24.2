@@ -25,6 +25,20 @@ const pega_json = async (caminho) => {
     return dados;
 }
 
+const dadosSessionStorage = sessionStorage.getItem('dados');
+const obj = JSON.parse(dadosSessionStorage);
+
+console.log('nJogos: ', obj.nJogos);
+
+const achaCookie = (chave) => {
+    const lista = document.cookie.split('; ');
+    const par = lista.find(
+        (ele) => ele.startsWith(`${chave}=`)
+    )
+
+    return par.split('=')[1];
+}
+
 
 const montaPagina = (dados) => {
     const body = document.body;
